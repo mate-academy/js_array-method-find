@@ -10,6 +10,11 @@ test('`find2` is added to [].__proto__', () => {
     .toBeInstanceOf(Function);
 });
 
+test(`find2 doesn't call default find`, () => {
+  expect([].find2.toString().includes('.find('))
+    .toBe(false);
+});
+
 test('for find(item => item > 10)', () => {
   expect(source.find2(x => x > 10))
     .toBe(20);
