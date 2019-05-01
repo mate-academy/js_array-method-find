@@ -5,7 +5,14 @@
  */
 function applyCustomFind() {
   [].__proto__.find2 = function(callback) {
-    // write code here
+    let i = 0;
+    while ((i < this.length) && (!callback(this[i], i, this))) {
+      i++;
+    }
+    if (i >= this.length) {
+      i = undefined;
+    }
+    return this[i];
   };
 }
 
