@@ -5,7 +5,14 @@
  */
 function applyCustomFind() {
   [].__proto__.find2 = function(callback) {
-    // write code here
+    let valueMethodFind;
+    for (let elem = 0; elem < this.length; elem++) {
+      if (callback(this[elem], elem, this)) {
+        valueMethodFind = this[elem];
+        break;
+      }
+    }
+    return valueMethodFind;
   };
 }
 
