@@ -9,16 +9,11 @@ function applyCustomFind() {
       return;
     }
 
-    let result;
-
     for (let i = 0; i < this.length; i++) {
       if (callback(this[i], i, this)) {
-        result = this[i];
-        break;
+        return this[i];
       }
     }
-
-    return result;
   };
 }
 
