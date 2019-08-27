@@ -11,7 +11,7 @@ function applyCustomFind() {
       }
     }
 
-    return undefined;
+    return;
   };
 }
 
