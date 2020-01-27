@@ -10,6 +10,8 @@ function applyCustomFind() {
         return this[i];
       };
     }
+
+    return undefined;
   };
 }
 
