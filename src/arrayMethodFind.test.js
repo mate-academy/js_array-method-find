@@ -3,6 +3,7 @@
 const applyCustomFind = require('./arrayMethodFind');
 
 const source = [0, 10, 20, 30];
+
 applyCustomFind();
 
 test('`find2` is added to [].__proto__', () => {
