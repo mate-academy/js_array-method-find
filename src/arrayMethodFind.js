@@ -15,7 +15,4 @@ function applyCustomFind() {
   };
 }
 
-// applyCustomFind();
-// console.log([0, 10, 20, 30].find2(a => a === 10));
-
 module.exports = applyCustomFind;
