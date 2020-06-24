@@ -5,7 +5,17 @@
  */
 function applyCustomFind() {
   [].__proto__.find2 = function(callback) {
-    // write code here
+    let matchedElem;
+
+    for (let i = 0; i < this.length; i++) {
+      if (callback(this[i], i, this)) {
+        matchedElem = this[i];
+
+        return matchedElem;
+      }
+    }
+
+    return undefined;
   };
 }
 
